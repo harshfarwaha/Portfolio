@@ -15,7 +15,7 @@
     --border-bright: #3a4a3f;
     --text: #e9ede9;
     --text-muted: #8ea095;
-    --text-dim: #5c6b62;
+    --text-dim: #82938a;
     --amber: #e8a33d;
     --amber-dim: #a67527;
     --cyan: #5fd8c7;
@@ -341,6 +341,32 @@
   .hero-meta a:hover{ color:var(--cyan); text-decoration:none; transform:translateY(-1px); }
   .hero-meta .icon{ color:var(--amber); }
 
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:32px;
+    opacity:0;
+    animation:fade-up .9s .66s cubic-bezier(.16,.8,.3,1) forwards;
+  }
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:.04em;
+    padding:12px 22px;
+    border:1px solid var(--border-bright);
+    color:var(--text);
+    background:transparent;
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    transition:border-color .25s ease, color .25s ease, transform .25s ease, background .25s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); text-decoration:none; }
+  .btn-primary{ border-color:var(--amber-dim); color:var(--amber); }
+  .btn-primary:hover{ border-color:var(--amber); background:rgba(232,163,61,.08); }
+  .btn-ghost:hover{ border-color:var(--cyan-dim); color:var(--cyan); background:rgba(95,216,199,.06); }
+
   .scroll-cue{
     margin-top:56px;
     font-family:var(--mono);
@@ -608,6 +634,11 @@
         <a href="tel:+917717244050"><span class="icon">☎</span>+91 7717244050</a>
         <span><span class="icon">◎</span>Mohali, Punjab</span>
       </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="resume.pdf" download>↓ Download Resume</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/harsh-farwaha-a1b635232" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn btn-ghost" href="https://github.com/harshfarwaha" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
       <div class="scroll-cue"><span class="line"></span>scroll to view full schematic</div>
     </div>
     <div class="hero-photo-wrap">
@@ -754,6 +785,14 @@
       <div class="contact-item">
         <div class="label">Location</div>
         <div class="value">Mohali, Punjab, India</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">LinkedIn</div>
+        <a class="value" href="https://www.linkedin.com/in/harsh-farwaha-a1b635232" target="_blank" rel="noopener">/harsh-farwaha</a>
+      </div>
+      <div class="contact-item">
+        <div class="label">GitHub</div>
+        <a class="value" href="https://github.com/harshfarwaha" target="_blank" rel="noopener">/harshfarwaha</a>
       </div>
     </div>
   </section>
