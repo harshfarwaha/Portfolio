@@ -435,13 +435,35 @@
     grid-template-columns:1fr;
     gap:24px;
   }
+  .project-card + .project-card{
+    margin-top:36px;
+    padding-top:36px;
+    border-top:1px dashed var(--border);
+  }
+  .project-index{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.14em;
+    color:var(--text-dim);
+    text-transform:uppercase;
+    margin-bottom:10px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .project-index .dot-tick{
+    width:5px; height:5px;
+    background:var(--cyan-dim);
+  }
   .project-name{
     font-family:var(--mono);
     font-size:19px;
     font-weight:600;
     color:var(--amber);
     margin-bottom:12px;
+    transition:color .25s ease;
   }
+  .project-card:hover .project-name{ color:#f0b658; }
   .signal-tags{ display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
   .signal-tag{
     font-family:var(--mono);
@@ -568,7 +590,7 @@
     <li><a href="#about" data-target="about">About</a></li>
     <li><a href="#education" data-target="education">Education</a></li>
     <li><a href="#training" data-target="training">Training</a></li>
-    <li><a href="#project" data-target="project">Project</a></li>
+    <li><a href="#projects" data-target="projects">Projects</a></li>
     <li><a href="#skills" data-target="skills">Skills</a></li>
     <li><a href="#contact" data-target="contact">Contact</a></li>
   </ul>
@@ -646,20 +668,52 @@
     </div>
   </section>
 
-  <section id="project" class="module reveal">
-    <div class="designator"><span class="dot"></span>U4 — FEATURED PROJECT</div>
+  <section id="projects" class="module reveal">
+    <div class="designator"><span class="dot"></span>U4 — PROJECTS</div>
+
     <div class="project-card">
-      <div>
-        <div class="project-name">Smart Safety Helmet for Coal Mining</div>
-        <p>An advanced wearable device designed to improve safety in coal mining environments. The helmet integrates sensors to monitor gas levels, temperature, and miner location — feeding real-time alerts back to prevent accidents and protect workers underground.</p>
-        <div class="signal-tags">
-          <span class="signal-tag">Gas level sensing</span>
-          <span class="signal-tag">Temperature monitoring</span>
-          <span class="signal-tag">Location tracking</span>
-          <span class="signal-tag">Real-time alerts</span>
-        </div>
+      <div class="project-index"><span class="dot-tick"></span>01 / HARDWARE</div>
+      <div class="project-name">Smart Safety Helmet for Coal Mining</div>
+      <p>An advanced wearable device designed to improve safety in coal mining environments. The helmet integrates sensors to monitor gas levels, temperature, and miner location — feeding real-time alerts back to prevent accidents and protect workers underground.</p>
+      <div class="signal-tags">
+        <span class="signal-tag">Gas level sensing</span>
+        <span class="signal-tag">Temperature monitoring</span>
+        <span class="signal-tag">Location tracking</span>
+        <span class="signal-tag">Real-time alerts</span>
       </div>
     </div>
+
+    <div class="project-card">
+      <div class="project-index"><span class="dot-tick"></span>02 / SOFTWARE</div>
+      <div class="project-name">Quiz Master</div>
+      <p>A website built with Python that runs interactive quizzes, alongside a handful of small games developed as part of the same effort.</p>
+      <div class="signal-tags">
+        <span class="signal-tag">Python</span>
+        <span class="signal-tag">Web app</span>
+        <span class="signal-tag">Game logic</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-index"><span class="dot-tick"></span>03 / HARDWARE</div>
+      <div class="project-name">Smart Stick for the Visually Impaired</div>
+      <p>An assistive device concept aimed at helping visually impaired users navigate their surroundings more safely and independently.</p>
+      <div class="signal-tags">
+        <span class="signal-tag">Assistive tech</span>
+        <span class="signal-tag">Obstacle detection</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-index"><span class="dot-tick"></span>04 / RESEARCH</div>
+      <div class="project-name">Drone Technology</div>
+      <p>Hands-on work exploring drone systems — covering the fundamentals of flight control, hardware, and how the underlying electronics come together.</p>
+      <div class="signal-tags">
+        <span class="signal-tag">Flight systems</span>
+        <span class="signal-tag">Embedded hardware</span>
+      </div>
+    </div>
+
   </section>
 
   <section id="skills" class="module reveal">
